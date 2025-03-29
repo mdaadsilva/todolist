@@ -34,24 +34,19 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `todolist`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `todolist`.`usuarios` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(80) NOT NULL,
-  `email` VARCHAR(80) NOT NULL,
-  `senha` VARCHAR(255) NOT NULL,
-  `token` VARCHAR(255) NULL,
-  `nivel` TINYINT(1) NOT NULL,
-  `foto` VARCHAR(150) NULL,
-  `data_cadastro` DATETIME NOT NULL,
-  `planos_id` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`id`, `planos_id`),
-  INDEX `fk_usuarios_planos_idx` (`planos_id` ASC),
-  CONSTRAINT `fk_usuarios_planos`
-    FOREIGN KEY (`planos_id`)
-    REFERENCES `todolist`.`planos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+-- todolist.usuarios definition
+
+CREATE TABLE `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(80) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `nivel` tinyint(1) NOT NULL DEFAULT '1',
+  `foto` varchar(150) DEFAULT NULL,
+  `data_cadastro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
