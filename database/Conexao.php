@@ -6,7 +6,7 @@ function conexao()
     $host = "localhost";
     $banco = "todolist";
     $usuario = "root";
-    $senha = "";
+    $senha = "root";
 
 
 
