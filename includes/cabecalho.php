@@ -22,11 +22,11 @@
         <!-- Conteúdo --><!-- Cabeçalho -->
 <header class="">
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-info">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../../index.php"> 
+      <a class="navbar-brand" href="../index.php"> 
           <img src="/todolist/assets/img/unnamed.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <strong>TodoList</strong>
+        <strong class="nometodolist">TodoList</strong>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,10 +40,7 @@
         </ul>
 
         <span class="sessao-usuario">
-            <a class="btn btn-primary" href="login.html">Registrar</a>
-            <button class="login-button" type="button" data-bs-toggle="" data-bs-target="">
-        <img src="/todolist/assets/img/login2.png" width="40" height="40" class="" alt="">
-        </button>
+            <a class="btn btn-primary" href="login/login.php">Entrar</a>
         </span>
       </div>
     </div>
