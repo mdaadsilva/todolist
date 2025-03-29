@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $valor = $_POST['valor'];
     $descricao = $_POST['descricao'];
 
-    inserirPlanos($titulo, $descricao, $valor);
+    inserirTarefas($titulo, $descricao, $valor);
 
 }
 

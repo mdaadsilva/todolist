@@ -1,7 +1,7 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . "/todolist/controllers/PlanoController.php";
 
-    $planos = index();
+    $tarefas = index();
 
     
 
@@ -18,7 +18,7 @@ include_once CABECALHO;
     <div class="row">
         <div class="col-sm-9 mx-auto">
 
-        <h3 class="text-center ">Lista de Planos</h3>
+        <h3 class="text-center ">Lista de Tarefas</h3>
 
         <div class="row">
             <div class="col-12 text-end">
@@ -40,15 +40,15 @@ include_once CABECALHO;
             <body>
 
 
-            <?php foreach($planos as $plan):?>
+            <?php foreach($tarefas as $tarefasad):?>
                 <tr>
-                    <td><?=$plan['id']?></td>
-                    <td><?=$plan['titulo']?></td>
-                    <td><?=$plan['valor']?></td>
+                    <td><?=$tarefasad['id']?></td>
+                    <td><?=$tarefasad['tarefa']?></td>
+                    <td><?=$tarefasad['descricao']?></td>
                     <td>
-                        <a href="/admin/plano/visualizar/?id=<?=$plan['id']?>" class="btn btn-sm btn-light"><i class="fas fa-eye"></i></a>
-                        <a href="/admin/plano/visualizar/?id=<?=$plan['id']?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                        <a href="/admin/plano/visualizar/?id=<?=$plan['id']?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="/admin/plano/visualizar/?id=<?=$tarefasad['id']?>" class="btn btn-sm btn-light"><i class="fas fa-eye"></i></a>
+                        <a href="/admin/plano/visualizar/?id=<?=$tarefasad['id']?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                        <a href="/admin/plano/visualizar/?id=<?=$tarefasad['id']?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php endforeach;?>
