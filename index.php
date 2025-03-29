@@ -11,7 +11,7 @@
         echo "Conectado...";
     }else{
         echo "Não Conectado";
-    }*/
+    } TESTE*/
 
 
 ?>
