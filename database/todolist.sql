@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `todolist`.`tarefas` (
   `tarefa` VARCHAR(45) NOT NULL,
   `descricao` TEXT NOT NULL,
   `prioridade` VARCHAR(10) NOT NULL,
+  `datavenc` DATETIME NOT NULL,
   `status` TINYINT(1) NOT NULL DEFAULT 0,
   `usuarios_id` INT NOT NULL,
   PRIMARY KEY (`id`, `usuarios_id`),
