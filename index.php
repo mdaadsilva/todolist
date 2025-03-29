@@ -42,7 +42,7 @@
 
 <div class="row">
     <div class="col-10 mx-auto text-center mt-3">
-        <a href="planos.html" class="btn btn-lg btn-primary"> Registrar-se</a>
+        <a href="login/cadastro_usuario.php" class="btn btn-lg btn-primary"> Registrar-se</a>
     </div>
 </div>
 

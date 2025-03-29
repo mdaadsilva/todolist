@@ -69,13 +69,16 @@ if (isset($_SESSION['mensagem_sucesso'])) {
                     </div>
                     <div class="modal-body text-center">
                         <i class="fas fa-check-circle" style="font-size: 50px; color: green;"></i><br><br>
-                        ' . $_SESSION['mensagem_sucesso'] . '
+                        ' . $_SESSION['mensagem_sucesso'] . '<br><br>
+                        <!-- Botão de ir para a tela de login -->
+                        <a href="login.php" class="btn btn-primary">Ir para Login</a>
                     </div>
                 </div>
             </div>
           </div>';
     unset($_SESSION['mensagem_sucesso']);
 }
+
 
 if (isset($_SESSION['mensagem_erro'])) {
     echo '<div class="modal fade show" id="erroModal" tabindex="-1" aria-labelledby="erroModalLabel" style="display:block;">
@@ -100,13 +103,11 @@ if (isset($_SESSION['mensagem_erro'])) {
     function fecharModal() {
         var modalSucesso = document.getElementById('sucessoModal');
         var modalErro = document.getElementById('erroModal');
-
-        // Fechar o modal de sucesso se ele estiver visível
+        
         if (modalSucesso && modalSucesso.style.display !== "none") {
             modalSucesso.style.display = "none";
         }
-
-        // Fechar o modal de erro se ele estiver visível
+        
         if (modalErro && modalErro.style.display !== "none") {
             modalErro.style.display = "none";
         }
