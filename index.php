@@ -2,18 +2,6 @@
 
     require_once "helpers/Config.php";
     include_once CABECALHO;
-
-    /*require_once "database/Conexao.php";
-
-    $db = conexao();
-
-    if ($db) {
-        echo "Conectado...";
-    }else{
-        echo "Não Conectado";
-    } TESTE*/
-
-
 ?>
 
 

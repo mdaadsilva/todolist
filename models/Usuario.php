@@ -35,4 +35,21 @@ function verificarEmailExistente($email) {
     return $resultado > 0; 
 }
 
+function autenticar($email, $senha) {
+    $db = conexao();     
+
+    $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+    $stmt->execute();
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuario) {
+        return $usuario;
+    }
+    
+    return false;
+}
+
 ?>

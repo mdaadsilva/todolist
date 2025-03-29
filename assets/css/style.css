@@ -51,3 +51,38 @@ footer{
 .rodape_texto{
     color: #fff;
 }
+
+.login-input {
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%; 
+    max-width: 600px;
+    min-width: 300px; 
+    border-radius: 10px;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .login-input {
+        width: 90%; 
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-input {
+        width: 100%; 
+        padding: 10px; 
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}

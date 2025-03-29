@@ -1,7 +1,5 @@
 <!-- Rodapé -->
 
-<link rel="stylesheet" href="assets/css/style.css">
-
 <footer class="bg-info mt-10">
     <div class="rodape">
             <div class="rodape_texto col-12 p-3 text-center">
