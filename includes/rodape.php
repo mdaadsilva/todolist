@@ -1,7 +1,9 @@
  <!-- Rodapé -->
 
- <footer class="container bg-light mt-5">
-        <div class="row">
+ <link rel="stylesheet" href="assets/css/style.css">
+
+ <footer class="bg-light mt-10">
+        <div class="rodape">
             <div class="col-12 p-3 text-center">
                 2025 &copy; - Todos os Direitos são reservados
             </div>

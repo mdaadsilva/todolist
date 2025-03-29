@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Gerenciamento de Tarefas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Adicionar Icone no Navegador -->
     <link rel="icon" type="image/png" href="/todolist/assets/img/logo-icon.png" />
@@ -19,7 +20,7 @@
 
 <body>
         <!-- Conteúdo --><!-- Cabeçalho -->
-<header class="container">
+<header class="">
 
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -35,20 +36,14 @@
       <div class="collapse navbar-collapse" id="navbarText">
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="../../index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sobre-nos.html">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="admin/plano">Planos</a>
-            </li>
-
+            
         </ul>
 
         <span class="sessao-usuario">
-            <a class="btn btn-primary" href="login.html">Entrar</a>
+            <a class="btn btn-primary" href="login.html">Registrar</a>
+            <button class="login-button" type="button" data-bs-toggle="" data-bs-target="">
+        <img src="/todolist/assets/img/login2.png" width="40" height="40" class="" alt="">
+        </button>
         </span>
       </div>
     </div>

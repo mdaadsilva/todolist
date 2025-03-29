@@ -36,15 +36,13 @@
 
 <div class="row">
     <div class="col-10 mx-auto text-center mt-3">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis ipsa quo neque velit,
-            suscipit optio doloribus ab mollitia, impedit amet, laudantium cum ea placeat tempore excepturi.
-            Corporis, porro ullam?</p>
+        <p>Seja bem-vindo ao ToDoList! Gerencie suas tarefas de forma simples e eficiente. Adicione compromissos, marque como concluído e organize seu dia sem complicações. Com uma interface intuitiva e prática, acompanhar suas atividades nunca foi tão fácil. Mantenha o foco, evite esquecimentos e torne sua rotina mais produtiva com o ToDoList.</p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-10 mx-auto text-center mt-3">
-        <a href="planos.html" class="btn btn-lg btn-primary">Conheça Nossos Planos</a>
+        <a href="planos.html" class="btn btn-lg btn-primary"> Registrar-se</a>
     </div>
 </div>
 
