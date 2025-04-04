@@ -10,3 +10,18 @@ function index($usuarios_id){
     return $tarefas;
 
 }
+
+function visualizar($id) {
+    $tarefa = buscarTarefaPorId($id);
+    return $tarefa;
+}
+
+function atualizar($dados) {
+    return atualizarTarefa(
+        $dados['tarefa'],
+        $dados['descricao'],
+        $dados['prioridade'],
+        $dados['datavenc'],
+        $dados['id']
+    );
+}

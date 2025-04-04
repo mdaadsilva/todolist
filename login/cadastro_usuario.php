@@ -1,11 +1,18 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once $_SERVER['DOCUMENT_ROOT']."/todolist/helpers/Config.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/todolist/models/Usuario.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    
     $nome  = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    
     
     if (verificarEmailExistente($email)) {
         $_SESSION['mensagem_erro'] = "Este email já está cadastrado!";
@@ -14,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     $resultado = inserirUsuario($nome, $email, $senha);
+
+    
 
     if ($resultado) {
         $_SESSION['mensagem_sucesso'] = "Usuário cadastrado com sucesso!";

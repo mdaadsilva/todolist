@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);    
 
     if ($stmt->execute()) {
-        echo "<script>alert('Tarefa concluída com sucesso!'); window.location.href='index.php';</script>";
+        echo "<script>alert('Tarefa concluída com sucesso!'); window.location.href='/todolist/index.php';</script>";
     } else {
         echo "<script>alert('Erro ao concluir tarefa!'); history.back();</script>";
     }

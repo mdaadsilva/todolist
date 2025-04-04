@@ -33,7 +33,7 @@ function inserirTarefas($tarefa, $descricao, $prioridade, $datavenc){
     }
 }
 
-function editarTarefas($tarefa, $descricao, $prioridade, $datavenc, $id){
+function atualizarTarefa($tarefa, $descricao, $prioridade, $datavenc, $id){
     $db = conexao();
 
     $stmt = $db->prepare("UPDATE tarefas SET tarefa = :tarefa, descricao = :descricao, prioridade = :prioridade, datavenc = :datavenc WHERE id = :tarefas_id");
@@ -48,4 +48,12 @@ function editarTarefas($tarefa, $descricao, $prioridade, $datavenc, $id){
     }else{
         return 0;
     }
+}
+
+function buscarTarefaPorId($id) {
+    $db = conexao();
+    $stmt = $db->prepare("SELECT * FROM tarefas WHERE id = :id");
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }

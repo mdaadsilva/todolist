@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema de Gerenciamento de Tarefas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="/todolist/assets/css/style.css">
 
     <!-- Adicionar Icone no Navegador -->
@@ -26,7 +28,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.php"> 
+      <a class="navbar-brand" href="/todolist/index.php"> 
           <img src="/todolist/assets/img/unnamed.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <strong class="nometodolist">TodoList</strong>
       </a>
@@ -42,9 +44,13 @@ session_start();
         </ul>
 
         <span class="sessao-usuario">
-            <a class="btn btn-primary" href="login/login.php">Entrar</a>
-        </span>
-      </div>
+          <?php if (!isset($_SESSION['usuario_id'])): ?>
+              <!-- <a class="btn btn-primary" href="/todolist/login/login.php">Entrar</a> -->
+          <?php else: ?>
+              <a class="btn btn-danger" href="/todolist/login/logout.php">Sair</a>
+          <?php endif; ?>
+      </span>
+    </div>
     </div>
   </nav>
 

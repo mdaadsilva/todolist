@@ -14,7 +14,7 @@ function login() {
         if ($usuario) {
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_email'] = $usuario['email'];
-            header("Location: ../index.php");
+            header("Location: /todolist/index.php");
         } else {
             echo "Usuário ou senha incorretos.";
         }
