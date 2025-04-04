@@ -59,10 +59,15 @@ include_once CABECALHO;
                 </div>                
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Cadastre-se</button>                   
+                    <button type="submit" class="btn btn-primary">Cadastre-se</button>                     
+                </div>
+                <div class="col-12 text-center">
+                    <p class="mt-3">
+                        Já tem conta?
+                        <a href="/todolist/index.php" class="text-decoration-none">Faça login</a>
+                    </p>
                 </div>
             </form>
-
         </div>
     </div>
 </main>
