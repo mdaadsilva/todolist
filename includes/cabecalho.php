@@ -13,6 +13,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Sistema de Gerenciamento de Tarefas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="/todolist/assets/css/style.css">
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Adicionar Icone no Navegador -->
     <link rel="icon" type="image/png" href="/todolist/assets/img/logo-icon.png" />

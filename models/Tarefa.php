@@ -57,3 +57,15 @@ function buscarTarefaPorId($id) {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+function tarefasVencemHoje($usuarios_id) {
+    $db = conexao();
+    $hoje = date('Y-m-d');    
+    
+    $stmt = $db->prepare("SELECT * FROM tarefas WHERE usuarios_id = :usuarios_id AND datavenc = :hoje AND status = 0");
+    $stmt->bindParam(':usuarios_id', $usuarios_id);
+    $stmt->bindParam(':hoje', $hoje);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}

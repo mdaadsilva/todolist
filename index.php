@@ -13,8 +13,30 @@ if (!isset($_SESSION['usuario_id'])) {
 }
 
 $tarefas = index($usuarios_id);
+$tarefasHoje = tarefasVencemHoje($usuarios_id);
 
 ?>
+<?php if (!empty($tarefasHoje)): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: 'Tarefas vencem hoje! 📅',
+            html: `
+                <ul style="text-align: left;">
+                    <?php foreach ($tarefasHoje as $t): ?>
+                        <li><strong><?= $t['tarefa'] ?></strong> - <?= date('d/m/Y', strtotime($t['datavenc'])) ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            `,
+            icon: 'warning',
+            confirmButtonText: 'Ok, vou ver!',
+            confirmButtonColor: '#3085d6',
+            backdrop: true,
+        });
+    });
+</script>
+<?php endif; ?>
+
 
 <main>
     <div class="row">
@@ -128,6 +150,9 @@ $tarefas = index($usuarios_id);
         </div>
     </div>
 </div>
+
+
+
 
 
 
