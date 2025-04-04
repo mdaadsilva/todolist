@@ -4,10 +4,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/todolist/controllers/TarefaController
 require_once $_SERVER['DOCUMENT_ROOT'] . "/todolist/helpers/Config.php";
 include_once CABECALHO;
 
-session_start();
 
 if (!isset($_SESSION['usuario_id'])) {
-    header('Location: ../../login/login.php');
+    header('Location: ../login/login.php');
     exit();
 } else {
     $usuarios_id = $_SESSION['usuario_id'];

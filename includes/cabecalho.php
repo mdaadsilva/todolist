@@ -24,7 +24,7 @@ session_start();
         <!-- Conteúdo --><!-- Cabeçalho -->
 <header class="">
 
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.php"> 
           <img src="/todolist/assets/img/unnamed.png" width="30" height="30" class="d-inline-block align-top" alt="">

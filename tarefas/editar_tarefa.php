@@ -1,5 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/todolist/controllers/TarefaController.php";
+$id = $_GET['id'];
+$tarefa = buscarTarefa($id);
 
 ?>
 

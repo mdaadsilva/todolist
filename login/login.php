@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "../helpers/Config.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/todolist/controllers/LoginController.php";
 include_once CABECALHO;

@@ -1,7 +1,7 @@
 .login-button{
     border-style: none;
     background-image: none;
-    background-color: deepskyblue;
+    background-color: #136A8A;
 }
 
 footer{
@@ -31,7 +31,7 @@ footer{
     font-size: 15px;
 }
 .button{
-    background-color: dodgerblue;
+    background-color: #0786db;
     border: none;
     padding: 15px;
     width: 100%;
@@ -41,7 +41,7 @@ footer{
     
 }
 .button:hover{
-    background-color: deepskyblue;
+    background-color: #136A8A;
     cursor: pointer;
 }
 

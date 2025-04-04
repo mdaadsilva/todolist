@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once $_SERVER['DOCUMENT_ROOT']."/todolist/helpers/Config.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/todolist/models/Usuario.php";
 

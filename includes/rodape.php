@@ -1,6 +1,6 @@
 <!-- Rodapé -->
 
-<footer class="bg-info mt-10">
+<footer class="bg-primary mt-10">
     <div class="rodape">
             <div class="rodape_texto col-12 p-3 text-center">
                 2025 &copy; - Todos os Direitos são reservados
